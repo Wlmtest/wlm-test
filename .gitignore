@@ -1,0 +1,10 @@
+/node_modules
+/mochawesome-reports
+/test
+/reports
+/public
+/samples
+.DS_Store
+.idea
+test_log.txt
+vendor

@@ -1,0 +1,52 @@
+{
+    "db": {
+        "yourPool":{
+            "connectionLimit": 10,
+            "host": "127.0.0.1",
+            "port": "3306",
+            "user": "username",
+            "password": "password",
+            "database": "yourDatabase"
+        }
+    },
+    "mail": {
+        "mst": {
+            "smtpOpt": {
+                "host": "example@example.com",
+                "port": 111,
+                "secure": true,
+                "auth": {
+                    "user": "user",
+                    "pass": "pass"
+                }
+            },
+            "mailOptions": {
+                "from": "'User",
+                "to": "a@example.com,b@example.com",
+                "cc": "c@example.com,d@example.com",
+                "subject": "Mail title",
+                "text": "edit your mail text",
+                "html": ""
+            }
+        },
+        "dev": {
+            "smtpOpt": {
+                "host": "example@example.com",
+                "port": 111,
+                "secure": true,
+                "auth": {
+                    "user": "user",
+                    "pass": "pass"
+                }
+            },
+            "mailOptions": {
+                "from": "'User",
+                "to": "a@example.com,b@example.com",
+                "cc": "c@example.com,d@example.com",
+                "subject": "Mail title",
+                "text": "edit your mail text",
+                "html": ""
+            }
+        }
+    }
+}
