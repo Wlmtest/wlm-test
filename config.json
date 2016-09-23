@@ -2,11 +2,9 @@
     "db": {
         "yourPool":{
             "connectionLimit": 10,
-            "host": "127.0.0.1",
-            "port": "3306",
-            "user": "username",
-            "password": "password",
-            "database": "yourDatabase"
+            "host": "localhost",
+            "user": "root",
+            "password": "12345"
         }
     },
     "mail": {
@@ -26,7 +24,7 @@
                 "cc": "c@example.com,d@example.com",
                 "subject": "Mail title",
                 "text": "edit your mail text",
-                "html": ""
+                "html": "hehe"
             }
         },
         "dev": {
@@ -45,7 +43,7 @@
                 "cc": "c@example.com,d@example.com",
                 "subject": "Mail title",
                 "text": "edit your mail text",
-                "html": ""
+                "html": "hehe"
             }
         }
     }

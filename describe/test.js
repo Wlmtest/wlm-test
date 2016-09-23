@@ -34,8 +34,8 @@ describe('test expamle', () => {
         });
     });
 
-    context.skip('the sub-describe ,rename as context: ',() => {
-        it('test unit 2: ',() => {
+    context('the sub-describe ,rename as context: ',() => {
+        it('test unit 3 local databse show: ',() => {
             return q_db.getDataBase().then(result => {
                 console.log(result);
                 result.should.not.be.empty();

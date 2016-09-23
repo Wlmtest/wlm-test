@@ -6,7 +6,7 @@ const query = _db.query;
 const sqls = {};
 
 sqls.getDataBase = () => {
-    let sql = `show variables like 'wait_timeout'`;
+    let sql = `show databases;`;
     return query(sql);
 };
 

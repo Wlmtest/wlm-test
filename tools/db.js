@@ -1,6 +1,6 @@
 //3dsystem数据库连接
 const mysql = require('mysql'),
-	config = require(`${__dir}config-1001.json`).db;
+	config = require(`${__dir}config.json`).db;
 let cn;
 
 let create = () => new _promise((resolve,reject) => {
@@ -22,6 +22,7 @@ let connect = () => new _promise((resolve,reject) => {
 //目前就3dsystem,以后要是还有别的，再往里面加.
 let query = sql => new _promise((resolve,reject) => {
 	cn.query(sql,(err,rows,fields) => {
+		console.log(err,rows,fields);
 		if (err) {
 			reject(err);
 		}
