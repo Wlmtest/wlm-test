@@ -1,0 +1,9 @@
+--reporter mochawesome --reporter-options reportDir=public,reportName=index,reportTitle=TestReporter,inlineAssets=true
+--inline-diffs
+--es_staging
+--full-trace
+--check-leaks
+--slow 500
+--recursive
+--growl
+--compilers js:babel-core/register

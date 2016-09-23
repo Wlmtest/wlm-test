@@ -2,14 +2,16 @@
 global.__dir      = `${process.env.PWD}/`;
 
 /*模块*/
+global._url = require('url');
+global._fs = require('fs');
+global._path = require('path');
 global.should = require('should');
 global._promise = require('promise');
 global._cheerio = require('cheerio');
-global._url = require('url');
-global._fs = require('fs');
 global._prettyjson = require('prettyjson');
 global._json5 = require('json5');
 global._ = require('lodash');
+global._rd = require('rd');
 
 /*扩展模块*/
 global._db = require(`${__dir}tools/db`);
