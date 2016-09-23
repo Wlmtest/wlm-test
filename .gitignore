@@ -1,6 +1,5 @@
 /node_modules
 /mochawesome-reports
-/test
 /reports
 /public
 /samples
@@ -8,3 +7,4 @@
 .idea
 test_log.txt
 vendor
+/npm-debug.log
