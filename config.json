@@ -3,8 +3,10 @@
         "yourPool":{
             "connectionLimit": 10,
             "host": "localhost",
-            "user": "root",
-            "password": "12345"
+            "port": "3306",
+            "user": "username",
+            "password": "password",
+            "database": "yourDatabase"
         }
     },
     "mail": {
@@ -19,12 +21,12 @@
                 }
             },
             "mailOptions": {
-                "from": "'User",
+                "from": "'User <user>",
                 "to": "a@example.com,b@example.com",
                 "cc": "c@example.com,d@example.com",
                 "subject": "Mail title",
                 "text": "edit your mail text",
-                "html": "hehe"
+                "html": ""
             }
         },
         "dev": {
@@ -38,12 +40,12 @@
                 }
             },
             "mailOptions": {
-                "from": "'User",
+                "from": "'User' <user>",
                 "to": "a@example.com,b@example.com",
                 "cc": "c@example.com,d@example.com",
                 "subject": "Mail title",
                 "text": "edit your mail text",
-                "html": "hehe"
+                "html": ""
             }
         }
     }

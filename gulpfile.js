@@ -5,12 +5,9 @@
     concat = require('gulp-concat'),
     filter = require('gulp-filter'),
     htmlmin = require('gulp-htmlmin'),
-    shell = require('gulp-shell'),
-    foreach = require('gulp-foreach'),
-    fs      = require('fs');
+    shell = require('gulp-shell');
 
-gulp.task('sendTestMail',shell.task(["node ./boots/email.js &"],{
-}));
+gulp.task('sendTestMail',shell.task(["node ./boots/email.js &"]));
 
 gulp.task('connect', () => {
     connect.server({

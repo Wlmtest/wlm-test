@@ -12,10 +12,10 @@ describe('test expamle', () => {
     context('the sub-describe ,rename as context: ',() => {
         let i = 0;
         it('test unit 1,base unit test: ',function () {
+            console.log(`retries times: ${i++}`);
             this.retries(4);
             this.timeout(0);
             [].should.be.empty();
-            console.log(`retries times: ${i++}`);
             [Math.random(),Math.random(),Math.random(),Math.random()].map(val => {
                 console.log(val);
                 val.should.be.Number();
@@ -25,7 +25,7 @@ describe('test expamle', () => {
     });
 
     context('the sub-describe ,rename as context: ',() => {
-        it('test unit 2: ',function () {
+        it('test unit 2 github api: ',function () {
             this.timeout(0);
             return q_api.test().then(result => {
                 console.log(result);
@@ -35,12 +35,12 @@ describe('test expamle', () => {
     });
 
     context('the sub-describe ,rename as context: ',() => {
-        it('test unit 3 local databse show: ',() => {
-            return q_db.getDataBase().then(result => {
+        it('test unit 3 local databse show: ',() =>
+            q_db.getDataBase().then(result => {
                 console.log(result);
                 result.should.not.be.empty();
-            });
-        });
+            })
+        );
     });
 
     after('before all of mocha tests run, do something:',() => {
