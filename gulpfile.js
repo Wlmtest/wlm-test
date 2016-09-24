@@ -5,12 +5,9 @@
     concat = require('gulp-concat'),
     filter = require('gulp-filter'),
     htmlmin = require('gulp-htmlmin'),
-    shell = require('gulp-shell'),
-    foreach = require('gulp-foreach'),
-    fs      = require('fs');
+    shell = require('gulp-shell');
 
-gulp.task('sendTestMail',shell.task(["node ./boots/email.js &"],{
-}));
+gulp.task('sendTestMail',shell.task(["node ./boots/email.js &"]));
 
 gulp.task('connect', () => {
     connect.server({
@@ -30,36 +27,6 @@ gulp.task('watch-reload',() => {
 });
 
 gulp.task('update',['connect','watch-reload']);
-
-gulp.task('test:user',() => {
-    var nums = 0;
-    //把mocha配置放入test中
-    gulp.src(['./boots/mocha.opts'])
-        .pipe(gulp.dest('test/'));
-
-    //合并生成可执行脚本,这个不要压缩，不然报告会更难阅读
-    gulp.src('./describe/**/*.js')
-        .pipe(foreach((stream, file) => {
-            nums++;
-            return gulp.src([
-                './boots/init.js',
-                file.path
-            ])
-                .pipe(concat('testUnit_'+ nums + '.js'))
-                .pipe(gulp.dest('test/user'));
-        }));
-
-    //把数据库链接脚本和mocha配置放入test中
-    gulp.src(['./tools/db.js'])
-        .pipe(gulp.dest('test/wlm/tools'));
-});
-
-gulp.task('test:others',() => {
-    gulp.src(['others/**/*'])
-        .pipe(gulp.dest('test/others'));
-});
-
-gulp.task('test',['test:User','test:others']);
 
 gulp.task('compress',() => {
     //压缩报告html，能缩减3%左右的代码
